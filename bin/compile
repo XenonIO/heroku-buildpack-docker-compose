@@ -17,7 +17,7 @@ echo "-----> Using docker CLI $DOCKER_VERSION"
 [ -e $LOCAL_DOCKER_TGZ ] || curl -s https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}-ce.tgz -o $LOCAL_DOCKER_TGZ
 
 echo "-----> Using docker-compose $COMPOSE_VERSION"
-[ -e $LOCAL_COMPOSE ] || curl -s -L https://github.com/docker/compose/releases/latest/download/docker-compose-`uname -s`-`uname -m` > $LOCAL_COMPOSE
+[ -e $LOCAL_COMPOSE ] || curl -s -L https://github.com/docker/compose/releases/latest/download/docker-compose-Linux-x86_64 > $LOCAL_COMPOSE
 
 echo "-----> Installing binaries under /app/vendor"
 tar -zxf $LOCAL_DOCKER_TGZ -C $VENDOR_DIR docker/docker
